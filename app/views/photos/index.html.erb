@@ -1,25 +1,15 @@
 <h1>Listing photos</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>File name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="photo">
+  <% if @photos %>
+    <%= render @photos %>
+  <% end %>
+</div>
 
-<% @photos.each do |photo| %>
-  <tr>
-    <td><%= photo.title %></td>
-    <td><%= photo.file_name %></td>
-    <td><%= link_to 'Show', photo %></td>
-    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-    <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
 <br />
 
-<%= link_to 'New Photo', new_photo_path %>
+<%= direct_upload_form_for @uploader do |f| %>
+  <p><%= f.file_field :image %></p>
+  <p><%= f.submit "Upload Image" %></p>
+<% end %>

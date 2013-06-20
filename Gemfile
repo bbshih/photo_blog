@@ -25,6 +25,7 @@ gem 'carrierwave'
 gem 'carrierwave_direct'
 gem 'sidekiq'
 gem 'fog'
+gem 'rmagick'
 
 gem 'jquery-rails'
 

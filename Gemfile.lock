@@ -110,6 +110,7 @@ GEM
     redis (3.0.4)
     redis-namespace (1.3.0)
       redis (~> 3.0.0)
+    rmagick (2.13.2)
     ruby-hmac (0.4.0)
     sass (3.2.9)
     sass-rails (3.2.6)
@@ -151,6 +152,7 @@ DEPENDENCIES
   fog
   jquery-rails
   rails (= 3.2.13)
+  rmagick
   sass-rails (~> 3.2.3)
   sidekiq
   sqlite3
